@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheSD Store</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">TheSD Store</a>
+      <ul class="nav-links">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+ 
+  <main>
+    <div class="product-container">
+     
+      <div class="product-image">
+        <img src="Mac.jpg" alt="Product Image" class="main-image" id="main-image">
+        <div class="image-gallery">
+          <img src="Mac.jpg" alt="Product Image 1" class="thumbnail" data-large="Mac.jpg">
+          <img src="mac1.jpg" alt="Product Image 2" class="thumbnail" data-large="mac1.jpg">
+          <img src="mactop.jpg" alt="Product Image 3" class="thumbnail" data-large="mactop.jpg">
+          <img src="macscreen.jpg" alt="Product Image 4" class="thumbnail" data-large="macscreen.jpg">
+        </div>
+      </div>
+
+      <div class="product-details">
+        <h1 class="product-name">Apple Mac Book M4 Max</h1>
+        <p class="product-description">
+          16-core Neural Engine<br>
+          41.05 cm (16.2″) Liquid Retina XDR display²<br>
+          Three Thunderbolt 5 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port<br>
+          Magic Keyboard with Touch ID<br>
+          Force Touch trackpad<br>
+          140W USB-C Power Adapter
+        </p>
+        <p class="product-price">₹3,49,900.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <section class="reviews">
+      <h2>Customer Reviews</h2>
+      <div class="review">
+        <p><strong>Divya</strong> - "Great product! Highly recommend it."</p>
+      </div>
+      <div class="review">
+        <p><strong>Tharun</strong> - "Excellent quality and fast delivery."</p>
+      </div>
+    </section>
+
+  
+    <section class="related-products">
+      <h2>Related Products</h2>
+      <div class="related-products-grid">
+        <div class="related-product">
+          <img src="macair.jpg" alt="Related Product 1">
+          <p>MacBook Air Apple M1 Chip</p>
+          <p>₹65,990.00</p>
+        </div>
+        <div class="related-product">
+          <img src="macm2.jpg" alt="Related Product 2">
+          <p>Related Product 2</p>
+          <p>₹1,19,900.00</p>
+        </div>
+        <div class="related-product">
+          <img src="ipad.jpg" alt="Related Product 3">
+          <p>13-inch iPad Pro </p>
+          <p>₹47,999.000</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ 
+  <footer>
+    <p>&copy; 2025 TheSD. All rights reserved.</p>
+  </footer>
+  <script>
+
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainImage = document.getElementById('main-image');
+
+ 
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+      
+        const largeImageUrl = thumbnail.getAttribute('data-large');
+      
+        mainImage.src = largeImageUrl;
+      });
+    });
+  </script>
+</body>
+</html>
